@@ -1,5 +1,5 @@
 package com.oneproject.satparam.modelo;
-
+// xy
 import java.io.Serializable;
 
 import javax.persistence.Id;

@@ -1,5 +1,5 @@
 package com.oneproject.satparam.modelo;
-//x
+//xy
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
