@@ -1,4 +1,4 @@
-package com.oneproject.satparam.modelo
+package com.oneproject.satparam.modelo;
 
 
 	import javax.persistence.Column;
