@@ -2,7 +2,7 @@ package com.oneproject.satparam.modelo;
 
 import java.io.Serializable;
 
-public class MpParamSatId implements Serializable {
+public class MpParamSatId implements Serializable{
 
 	private String  codent;
 	private String  centalta;
