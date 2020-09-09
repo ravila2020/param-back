@@ -1,5 +1,5 @@
 package com.oneproject.satparam.modelo;
-
+ 
 import java.util.Date;
 
 import javax.persistence.Column;
