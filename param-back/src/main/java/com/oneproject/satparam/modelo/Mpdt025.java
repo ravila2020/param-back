@@ -1,4 +1,5 @@
-package com.mtto.sat25.modelo;
+package com.oneproject.satparam.modelo
+--package com.mtto.sat25.modelo;
 
 	import javax.persistence.Column;
 	import javax.persistence.Entity;
