@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
 // componente modificado
-//
+// reintento
 @Entity
 @Table(name = "m_role")
 public class Role {
