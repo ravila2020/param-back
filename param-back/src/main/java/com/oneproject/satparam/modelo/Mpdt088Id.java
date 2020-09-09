@@ -1,4 +1,4 @@
-package com.mtto.practicaA.modelo;
+package com.oneproject.satparam.modelo;
 
 import java.io.Serializable;
 
