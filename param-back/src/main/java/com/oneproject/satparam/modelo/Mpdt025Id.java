@@ -1,4 +1,6 @@
-package com.mtto.sat25.modelo;
+package com.oneproject.satparam.modelo;
+
+
 
 import java.io.Serializable;
 
