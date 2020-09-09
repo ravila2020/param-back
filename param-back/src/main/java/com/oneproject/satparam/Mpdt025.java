@@ -13,6 +13,7 @@ package com.mtto.sat25.modelo;
 	
 	public class Mpdt025 {
 	
+		
 	@Id           
 	private String  codent;         
 	
