@@ -4,7 +4,7 @@ public class Acceso{
 
 	
 	// Ajuste de acceso para JWT Version (Roberto Avila)
-	//Alberto Guarneros
+	//Alberto Guarneros 
 	
 	
 }
