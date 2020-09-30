@@ -49,14 +49,20 @@ public class RestDemoControllerMP26 {
 		return repo.findById(llave026);
 	}
 	
-	
-
 	@GetMapping(path= {"/"})
-	public List<Mpdt026> list026Filtro(@RequestParam("entidad") String entidad, @RequestParam("marca") String marca){
+	public List<Mpdt026>list026Filtro(@RequestParam("entidad") String entidad, @RequestParam("marca") String marca){
 		
 		return (List<Mpdt026>) repo.findByEntidadOrMarca(entidad.toString(),marca.toString());
 		
 	}
+
+	@GetMapping(path= {"/entidad"})
+	public List<String> list026Entidad(){
+		
+		return  repo.findByEntidad();
+		
+	}
+	
 	
 	@PostMapping
 	public void insertar(@RequestBody Mpdt026 marca) {
