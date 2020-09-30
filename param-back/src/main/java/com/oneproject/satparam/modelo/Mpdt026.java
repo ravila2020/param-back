@@ -3,10 +3,13 @@ package com.oneproject.satparam.modelo;
 
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
+
 import javax.persistence.Table;
+
 
 @Entity
 @IdClass(Mpdt026Id.class)
@@ -132,5 +135,7 @@ public class Mpdt026 {
 	public void setContcur(String contcur) {
 		this.contcur = contcur;
 	}
-		
+	
+
+
 }
