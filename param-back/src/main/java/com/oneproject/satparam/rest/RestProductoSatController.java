@@ -99,10 +99,37 @@ public class RestProductoSatController {
     	}
 	}
 
-	 @GetMapping("/entidades")
-	 public List<String> listEntidades(){
-		 return repo.findEntidades();
-	 }
+	@GetMapping("/entidades")
+	public List<String> listEntidades(){
+		return repo.findEntidades();
+	}
 	
+	@GetMapping("/productos/{idEntidad}")
+	public List<String> listProductos(@PathVariable("idEntidad") String idEntidad){
+		return repo.findProductos(idEntidad);
+	}
+	
+	@GetMapping("/subproductos/{id}")
+	public List<String> listSubProductos(@PathVariable("id") String id){
+		System.out.println("lisSubproductos id : "+ id);
+		String idEntidad = id.substring(0,4);
+		System.out.println("lisSubproductos idEntidad : "+ idEntidad);
+		String idProducto = id.substring(4,6);
+		System.out.println("lisSubproductos idProducto : "+ idProducto);
+		return repo.findSubProductos(idEntidad, idProducto);
+	}
+	
+	@GetMapping("/lineas/{id}")
+	public List<String> listCodLineas(@PathVariable("id") String id){
+		String idEntidad = id.substring(0,4);
+		String idProducto = id.substring(4,6);
+		String idSubProducto = id.substring(6,10);
+		return repo.findCodLineas(idEntidad, idProducto, idSubProducto);
+	}
+	
+	@GetMapping("/productosentidad/{idEntidad}")
+	public List<ProductoSat> listProductosEntidad(@PathVariable("idEntidad") String idEntidad){
+		return repo.findInfProductosEntidad(idEntidad);
+	}
 	 
 }
