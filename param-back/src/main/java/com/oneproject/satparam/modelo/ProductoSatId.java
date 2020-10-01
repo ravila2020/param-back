@@ -3,7 +3,7 @@ package com.oneproject.satparam.modelo;
 import java.io.Serializable;
 
 public class ProductoSatId implements Serializable {
-	private String codNrbeEnt; 
+	private String codNrbeEn;
 	private String idPrdSat; 
 	private String idSPrdSat; 
 	private String codLinea;
@@ -12,19 +12,19 @@ public class ProductoSatId implements Serializable {
 		
 	}
 	
-	public ProductoSatId (String _codNrbeEnt, String _idPrdSat, String _idSPrdSat, String _codLinea  ) {
-		this.codNrbeEnt = _codNrbeEnt;
+	public ProductoSatId (String _codNrbeEn, String _idPrdSat, String _idSPrdSat, String _codLinea  ) {
+		this.codNrbeEn = _codNrbeEn;
 		this.idPrdSat = _idPrdSat;
 		this.idSPrdSat = _idSPrdSat;
 		this.codLinea = _codLinea;
 	}
 
-	public String getCodNrbeEnt() {
-		return codNrbeEnt;
+	public String getCodNrbeEn() {
+		return codNrbeEn;
 	}
 
-	public void setCodNrbeEnt(String codNrbeEnt) {
-		this.codNrbeEnt = codNrbeEnt;
+	public void setCodNrbeEn(String codNrbeEnt) {
+		this.codNrbeEn = codNrbeEnt;
 	}
 
 	public String getIdPrdSat() {

@@ -10,7 +10,7 @@ public class ProductoSat {
 
 	@Id
 	@Column(name = "COD_NRBE_EN", length = 4)
-	private String codNrbeEnt;
+	private String codNrbeEn;
 	
 	@Id
 	@Column(name="ID_PRD_SAT", length = 2)
@@ -49,11 +49,11 @@ public class ProductoSat {
 	/* Getters and Setters */
 
 	public String getCodNrbeEnt() {
-		return codNrbeEnt;
+		return codNrbeEn;
 	}
 
-	public void setCodNrbeEnt(String codNrbeEnt) {
-		this.codNrbeEnt = codNrbeEnt;
+	public void setCodNrbeEnt(String codNrbeEn) {
+		this.codNrbeEn = codNrbeEn;
 	}
 
 	public String getIdPrdSat() {
