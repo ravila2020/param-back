@@ -21,7 +21,7 @@ public interface mpdt043Repo extends JpaRepository <Mpdt043, Mpdt043Id> {
 	@Query("Select DISTINCT (m.subprodu) from Mpdt043 m where m.codent = :entidad and producto = :producto")
 	List<String> findSubProductosProd(@Param("entidad") String entidad, @Param("producto") String producto );
 	
-	@Query("Select m from Mpdt043 m where m.codent = :entidad or m.producto = :producto or m.subprodu = :subproducto")
+	@Query("Select m from Mpdt043 m where m.codent = :entidad and (m.producto = :producto or :producto = '00' ) and (m.subprodu = :subproducto or :subproducto='0000')")
 	List<Mpdt043> findProductos(@Param("entidad") String entidad, @Param("producto") String producto, @Param("subproducto") String subproducto );
  
 }
