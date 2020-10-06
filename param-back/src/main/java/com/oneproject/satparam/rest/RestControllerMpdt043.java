@@ -29,17 +29,20 @@ public class RestControllerMpdt043 {
 
 	@GetMapping
 	public List<Mpdt043> listar() {
+		System.out.print("ENTRA A METODO LIST...........");
 		return repo.findAll();
 	}
 
 	@GetMapping(path = { "/{id}" })
 	public Optional<Mpdt043> listarId(@PathVariable("id") String id) {
-
+		System.out.print("ENTRA A METODO GET ID...........");
 		String buscar = "=";
 		int intIndex = id.indexOf(buscar);
 
 		id = id.substring(intIndex + 1);
 
+		System.out.print(id);
+		
 		String codent = id.substring(0, 4);
 		String producto = id.substring(4, 6);
 		String subprodu = id.substring(6, 10);
@@ -59,6 +62,7 @@ public class RestControllerMpdt043 {
 	
 	@PostMapping
 	public void insertar(@RequestBody Mpdt043 registro){
+		System.out.print("ENTRA A METODO INSERTAR...........");
 		repo.save(registro);
 	}
 	
@@ -91,6 +95,55 @@ public class RestControllerMpdt043 {
 		
 		repo.deleteById(pk);
 	}
+	
+	
+	@GetMapping("/Srvmp04301")
+	public List<String> listEntidades(){
+		return repo.findEntidadesProd();
+	}
+	
+	@GetMapping("/Srvmp04302/{id}")
+	public List<String> listProdu(@PathVariable("id") String id){
+		
+    	String buscar="=";
+        int intIndex = id.indexOf(buscar);
+        
+        String entidad = id.substring(intIndex+1);
 
+		return repo.findProductosProd(entidad);
+	}
+
+	@GetMapping("/Srvmp04303/{id}")
+	public List<String> listSubProdu(@PathVariable("id") String id){
+		
+    	String buscar="=";
+        int intIndex = id.indexOf(buscar);
+        
+        id = id.substring(intIndex+1);
+    	
+    	String entidad  = id.substring(0,4);
+    	String producto  = id.substring(4,6);
+
+		return repo.findSubProductosProd(entidad, producto);
+	}
+
+	@GetMapping( "/FindProductos/{id}")
+	public List<Mpdt043> findId(@PathVariable("id") String id) {
+		System.out.print("ENTRA A METODO FindProductos ...........");
+		String buscar = "=";
+		int intIndex = id.indexOf(buscar);
+
+		id = id.substring(intIndex + 1);
+
+		System.out.print(id);
+		
+		String codent = id.substring(0, 4);
+		String producto = id.substring(4, 6);
+		String subprodu = id.substring(6, 10);
+
+
+		return repo.findProductos(codent, producto, subprodu);
+
+	}
 
 }
