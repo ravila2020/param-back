@@ -98,6 +98,9 @@ public class AppUser {
 	public Integer getId() {
 		return id;
 	}
+	public Integer getId2() {
+		return id;
+	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
