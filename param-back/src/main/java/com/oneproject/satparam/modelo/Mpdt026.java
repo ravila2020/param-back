@@ -137,5 +137,12 @@ public class Mpdt026 {
 	}
 	
 
+	public String getContcur51() {
+		return contcur;
+	}
+
+	public void setContcur51(String contcur) {
+		this.contcur = contcur;
+	}
 
 }
