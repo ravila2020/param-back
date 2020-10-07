@@ -140,6 +140,10 @@ public class Mpdt026 {
 		this.contcur = contcur;
 	}
 	
+	
+	public String getContcur50() {
+		return contcur;
+	}
 
 	public String getContcur51() {
 		return contcur;

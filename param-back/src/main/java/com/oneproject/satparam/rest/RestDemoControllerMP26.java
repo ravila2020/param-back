@@ -55,7 +55,7 @@ public class RestDemoControllerMP26 {
 		return (List<Mpdt026>) repo.findByEntidadOrMarca(entidad.toString(),marca.toString());
 		
 	}
-	
+
 	@GetMapping(path= {"/entidad"})
 	public List<String> list026Entidad(){
 		
@@ -63,11 +63,6 @@ public class RestDemoControllerMP26 {
 		
 	}
 	
-	@GetMapping("/mpdt026/{Entidad}")
-	public List<String> listProductos(@PathVariable("Entidad") String Entidad){
-		System.out.printf("Entidad Marca " +Entidad);
-		return repo.findByMarca(Entidad);
-	}
 	
 	@PostMapping
 	public void insertar(@RequestBody Mpdt026 marca) {
