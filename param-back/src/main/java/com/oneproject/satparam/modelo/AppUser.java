@@ -197,6 +197,9 @@ public class AppUser {
 	public void setSelfServiceUser3(boolean isSelfServiceUser) {
 		this.isSelfServiceUser = isSelfServiceUser;
 	}
+	public void setSelfServiceUser2(boolean isSelfServiceUser) {
+		this.isSelfServiceUser = isSelfServiceUser;
+	}
 	public void setSelfServiceUser(boolean isSelfServiceUser) {
 		this.isSelfServiceUser = isSelfServiceUser;
 	}
