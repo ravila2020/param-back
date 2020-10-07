@@ -62,5 +62,7 @@ public class Role {
 		this.isDisable = isDisable;
 	}
 	
-	
+	public void setDisable2(boolean isDisable) {
+		this.isDisable = isDisable;
+	}
 }
