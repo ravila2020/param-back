@@ -51,7 +51,10 @@ public class Mpdt026 {
 	public String getCodent() {
 		return codent;
 	}
-
+	
+	public String getCodent52() {
+		return codent;
+	}
 	public void setCodent(String codent) {
 		this.codent = codent;
 	}
