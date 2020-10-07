@@ -152,8 +152,4 @@ public class Mpdt026 {
 		return contcur;
 	}
 
-	public void setContcur51(String contcur) {
-		this.contcur = contcur;
-	}
-
 }
