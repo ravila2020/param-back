@@ -7,6 +7,8 @@ import com.oneproject.satparam.modelo.Mpdt088Id;
 
 
 public interface IMpdt088Repo extends JpaRepository<Mpdt088, Mpdt088Id> {
+	
+	
 
 }
 
