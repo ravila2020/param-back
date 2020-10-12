@@ -8,19 +8,22 @@ package com.oneproject.satparam.modelo;
 	import javax.persistence.Table;
 
 	@Entity
-	@IdClass(Mpdt025Id.class)
+//	@IdClass(Mpdt025Id.class)
 	@Table(name = "mpdt025")
 	
 	
 	public class Mpdt025 {
 	
 		
-	@Id           
+	@Id
+	@Column(name = "CODENT", length = 4)
 	private String  codent;         
-	
+
+
 	@Column(name = "CODMAR", length = 2)	                    
-	private int codmar;                                   
-	                                                          
+	private int codmar;     
+	
+                                                      
 	@Column(name = "INDTIPT", length = 2)	                  
 	private int indtipt;                                  
 	                                                          

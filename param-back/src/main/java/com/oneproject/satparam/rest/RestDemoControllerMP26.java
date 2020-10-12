@@ -62,7 +62,21 @@ public class RestDemoControllerMP26 {
 		return  repo.findByEntidad();
 		
 	}
-	
+
+	@GetMapping(path= {"/marca"})
+	public List<String> list026Marca(){
+		
+		return  repo.findByMarca();
+		
+	}
+
+	@GetMapping(path= {"/itipotarj"})
+	public List<String> list026Itipotarj(){
+		
+		return  repo.findByindtipt();
+		
+	}
+
 	
 	@PostMapping
 	public void insertar(@RequestBody Mpdt026 marca) {
