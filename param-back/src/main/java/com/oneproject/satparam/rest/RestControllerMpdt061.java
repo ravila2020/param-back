@@ -25,5 +25,19 @@ public class RestControllerMpdt061 {
 		return repo.findAll();
 	}
 
-	
+
+	@GetMapping(path= {"/binpre"})
+	public List<String> list061Binpre(){
+		return  repo.findByBinpre();
+	}
+
+	@GetMapping(path= {"/rangsup"})
+	public List<String> list061Rangsup(){
+		return  repo.findByRangosup();
+	}
+
+	@GetMapping(path= {"/ranginf"})
+	public List<String> list061Ranginf(){
+		return  repo.findByRangoinf();
+	}
 }
