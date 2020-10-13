@@ -3,7 +3,6 @@ package com.oneproject.satparam.rest;
 import java.util.List;
 import java.util.Optional;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,10 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.oneproject.satparam.repositorio.IMpdt026Repo;
-
 import com.oneproject.satparam.modelo.Mpdt026;
 import com.oneproject.satparam.modelo.Mpdt026Id;
+import com.oneproject.satparam.repositorio.IMpdt026Repo;
 
 @CrossOrigin(origins = "http://localhost:4200",maxAge = 3600)
 @RestController
@@ -65,16 +63,17 @@ public class RestDemoControllerMP26 {
 
 	@GetMapping(path= {"/marca"})
 	public List<String> list026Marca(@RequestParam("entidad") String entidad){
-		
+		System.out.printf(" codent" +entidad + "                           ");
 		return  repo.findByMarca(entidad);
 		
 	}
 
 	@GetMapping(path= {"/itipotarj"})
-	public List<String> list026Itipotarj(){
+	public List<String> list026Itipotarj(@RequestParam("entidad") String entidad, @RequestParam("marca") String marca){
 		
-		return  repo.findByindtipt();
+		System.out.printf(" codent" +entidad + "codmar" + marca + "                           ");
 		
+		return  repo.findByindtipt(entidad,marca);
 	}
 
 	
