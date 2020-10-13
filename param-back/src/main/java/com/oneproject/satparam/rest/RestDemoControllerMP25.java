@@ -67,6 +67,7 @@ public class RestDemoControllerMP25 {
     
 	@PostMapping
 	public void insertar(@RequestBody Mpdt025 marca){
+	System.out.print("codent: " + marca.getCodent() + " " + "codmar: " + marca.getCodmar() + " " + "indtipt: " + marca.getIndtipt() + " "); 
 		repo.save(marca);
 	}
 	

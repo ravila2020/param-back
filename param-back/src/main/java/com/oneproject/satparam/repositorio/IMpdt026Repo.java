@@ -19,8 +19,8 @@ public interface IMpdt026Repo extends JpaRepository<Mpdt026 ,Mpdt026Id>{
 	@Query("select DISTINCT  (m.codent) from Mpdt026 m")
 	List<String> findByEntidad();
 	
-	@Query("select DISTINCT  (m.codmar) from Mpdt026 m")
-	List<String> findByMarca();
+	@Query("select DISTINCT  (m.codmar) from Mpdt026 m where m.codent =:entidad")
+	List<String> findByMarca(@Param("entidad") String entidad);
 	
 	@Query("select DISTINCT  (m.indtipt) from Mpdt026 m")
 	List<String> findByindtipt();

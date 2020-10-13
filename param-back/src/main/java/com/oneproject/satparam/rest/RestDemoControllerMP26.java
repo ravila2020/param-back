@@ -64,9 +64,9 @@ public class RestDemoControllerMP26 {
 	}
 
 	@GetMapping(path= {"/marca"})
-	public List<String> list026Marca(){
+	public List<String> list026Marca(@RequestParam("entidad") String entidad){
 		
-		return  repo.findByMarca();
+		return  repo.findByMarca(entidad);
 		
 	}
 
