@@ -23,6 +23,7 @@ import com.oneproject.satparam.repositorio.IMpdt088Repo;
 @RequestMapping("/mpdt088")
 public class RestDemoControllerMpdt088 {
 	
+	
 	 @Autowired
 
      private IMpdt088Repo repo;
@@ -107,5 +108,8 @@ return repo.findById(llave88);
                     repo.deleteById(llave88);
 
      }
+     
+         
+     
 
 }
