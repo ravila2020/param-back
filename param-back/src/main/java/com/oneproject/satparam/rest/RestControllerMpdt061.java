@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.oneproject.satparam.modelo.Mpdt026;
 import com.oneproject.satparam.modelo.Mpdt061;
 import com.oneproject.satparam.repositorio.IMpdt061Repo;
 

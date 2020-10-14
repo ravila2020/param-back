@@ -19,23 +19,23 @@ public class Mpdt061 {
 	@Column(name ="BINPREPRO")
 	private String Binprepro;
 	@Column(name ="CLAMON")
-	private String Clamon;
+	private int Clamon;
 	@Column(name ="CLASE")
-	private int Clase;
+	private String Clase;
 	@Column(name ="CODENTUMO")
-	private int Codentumo;
+	private String Codentumo;
 	@Column(name ="CODOFIUMO")
 	private String Codofiumo;
 	@Column(name ="CODPAIS")
 	private int Codpais;
 	@Column(name ="CODTERMUMO")
-	private int Codtermumo;
+	private String Codtermumo;
 	@Column(name ="ICAENT")
-	private String Icaent;
+	private int Icaent;
 	@Column(name ="INDRANGO")
 	private int Indrango;
 	@Column(name ="LONGTAR")
-	private int Longtar;
+	private String Longtar;
 	@Column(name ="NOMENT")
 	private String Noment;
 	@Column(name ="PAISENT")
@@ -45,14 +45,13 @@ public class Mpdt061 {
 	@Column(name ="RANGOSUP")
 	private String Rangosup;
 	@Column(name ="SITCOMPEN")
-	private String Sitcompen;
+	private int Sitcompen;
 	@Column(name ="SITENT")
-	private String Sitent;
+	private int Sitent;
 	@Column(name ="USUARIOUMO")
 	private String Usuarioumo;
 	@Column(name ="CONTCUR")
 	private String Contcur;
-	
 	public String getBinpre() {
 		return Binpre;
 	}
@@ -65,22 +64,22 @@ public class Mpdt061 {
 	public void setBinprepro(String binprepro) {
 		Binprepro = binprepro;
 	}
-	public String getClamon() {
+	public int getClamon() {
 		return Clamon;
 	}
-	public void setClamon(String clamon) {
+	public void setClamon(int clamon) {
 		Clamon = clamon;
 	}
-	public int getClase() {
+	public String getClase() {
 		return Clase;
 	}
-	public void setClase(int clase) {
+	public void setClase(String clase) {
 		Clase = clase;
 	}
-	public int getCodentumo() {
+	public String getCodentumo() {
 		return Codentumo;
 	}
-	public void setCodentumo(int codentumo) {
+	public void setCodentumo(String codentumo) {
 		Codentumo = codentumo;
 	}
 	public String getCodofiumo() {
@@ -95,16 +94,16 @@ public class Mpdt061 {
 	public void setCodpais(int codpais) {
 		Codpais = codpais;
 	}
-	public int getCodtermumo() {
+	public String getCodtermumo() {
 		return Codtermumo;
 	}
-	public void setCodtermumo(int codtermumo) {
+	public void setCodtermumo(String codtermumo) {
 		Codtermumo = codtermumo;
 	}
-	public String getIcaent() {
+	public int getIcaent() {
 		return Icaent;
 	}
-	public void setIcaent(String icaent) {
+	public void setIcaent(int icaent) {
 		Icaent = icaent;
 	}
 	public int getIndrango() {
@@ -113,10 +112,10 @@ public class Mpdt061 {
 	public void setIndrango(int indrango) {
 		Indrango = indrango;
 	}
-	public int getLongtar() {
+	public String getLongtar() {
 		return Longtar;
 	}
-	public void setLongtar(int longtar) {
+	public void setLongtar(String longtar) {
 		Longtar = longtar;
 	}
 	public String getNoment() {
@@ -143,16 +142,16 @@ public class Mpdt061 {
 	public void setRangosup(String rangosup) {
 		Rangosup = rangosup;
 	}
-	public String getSitcompen() {
+	public int getSitcompen() {
 		return Sitcompen;
 	}
-	public void setSitcompen(String sitcompen) {
+	public void setSitcompen(int sitcompen) {
 		Sitcompen = sitcompen;
 	}
-	public String getSitent() {
+	public int getSitent() {
 		return Sitent;
 	}
-	public void setSitent(String sitent) {
+	public void setSitent(int sitent) {
 		Sitent = sitent;
 	}
 	public String getUsuarioumo() {
@@ -167,5 +166,7 @@ public class Mpdt061 {
 	public void setContcur(String contcur) {
 		Contcur = contcur;
 	}
+	
+	
 
 }
