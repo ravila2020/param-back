@@ -70,6 +70,60 @@ public class RestDemoControllerMP25 {
 	System.out.print("codent: " + marca.getCodent() + " " + "codmar: " + marca.getCodmar() + " " + "indtipt: " + marca.getIndtipt() + " "); 
 		repo.save(marca);
 	}
+
+	@PostMapping(path = {"/complex"})
+	public void insertarCplx(@RequestBody Mpdt025 marca) {
+		repo.saveByTodos(marca.getCodent(),
+				marca.getCodmar(),
+				marca.getIndtipt(),
+				marca.getBinenttip(),
+				marca.getBinproc(),
+				marca.getNumulttar(),
+				marca.getInddebcre(),
+				marca.getIndbinemp(),
+				marca.getRangosup(),
+				marca.getRangoinf(),
+				marca.getRutinapan(),
+				marca.getCodserv(),
+				marca.getGencarpin(),
+				marca.getIndintpan(),
+				marca.getIndcmbpan(),
+				marca.getIndcmbpin(),
+				marca.getNummesproren(),
+				marca.getNummintar(),
+				marca.getNummaxdia(),
+				marca.getTecnologia(),
+				marca.getIndgenvisaphone(),
+				marca.getIndacttar(),
+				marca.getFecalta(),
+				marca.getFecini(),
+				marca.getFecfin(),
+				marca.getGruafin(),
+				marca.getPorcesafin(),
+				marca.getPorbontitafin(),
+				marca.getIndadmpres(),
+				marca.getIndpinpres(),
+				marca.getVigtarpre(),
+				marca.getIndmesvigmin(),
+				marca.getCodclave(),
+				marca.getIndrescli(),
+				marca.getFecexpmon(),
+				marca.getExponente(),
+				marca.getNumkpin(),
+				marca.getPista1(),
+				marca.getPista2(),
+				marca.getTamcodbarr(),
+				marca.getForestamp(), 
+				marca.getIndtarvir(), 
+				marca.getIndoffpvv(), 
+				marca.getCodentumo(), 
+				marca.getCodofiumo(), 
+				marca.getUsuarioumo(),
+				marca.getCodtermumo(),
+				marca.getContcur()			);
+	}
+		
+	
 	
 	@PutMapping
 	public void modificar(@RequestBody Mpdt025 marca){

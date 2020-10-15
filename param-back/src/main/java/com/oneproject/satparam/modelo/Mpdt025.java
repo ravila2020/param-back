@@ -8,7 +8,7 @@ package com.oneproject.satparam.modelo;
 	import javax.persistence.Table;
 
 	@Entity
-//	@IdClass(Mpdt025Id.class)
+	@IdClass(Mpdt025Id.class)
 	@Table(name = "mpdt025")
 	
 	
@@ -19,17 +19,18 @@ package com.oneproject.satparam.modelo;
 	@Column(name = "CODENT", length = 4)
 	private String  codent;         
 
-
+	@Id
 	@Column(name = "CODMAR", length = 2)	                    
 	private int codmar;     
 	
-                                                      
+	@Id                                                     
 	@Column(name = "INDTIPT", length = 2)	                  
 	private int indtipt;                                  
 	                                                          
 	@Column(name = "BINENTTIP", length = 6)	                
 	private String binenttip;                                 
 	                                                          
+	@Id
 	@Column(name = "BINPROC", length = 6)	                  
 	private String binproc;                                   
 	                                                          
@@ -42,9 +43,11 @@ package com.oneproject.satparam.modelo;
 	@Column(name = "INDBINEMP", length = 01)	                
 	private String indbinemp;                                 
 	                                                          
+	@Id
 	@Column(name = "RANGOSUP", length = 16)	                  
 	private String rangosup;                                  
 	                                                          
+	@Id
 	@Column(name = "RANGOINF", length = 16)	                  
 	private String rangoinf;                                  
 	                                                          
@@ -55,7 +58,7 @@ package com.oneproject.satparam.modelo;
 	private int codserv;                                  
 	                                                          
 	@Column(name = "GENCARPIN", length = 1)	                
-	private String GENCARPIN;                                 
+	private String gencarpin;                                 
 	                                                          
 	@Column(name = "INDINTPAN", length = 50)	                
 	private String indintpan;                                 
@@ -137,7 +140,83 @@ package com.oneproject.satparam.modelo;
 	                                                          
 	@Column(name = "TAMCODBARR", length = 9)	                
 	private int tamcodbarr;                               
+
+	@Column(name = "FORESTAMP", length = 10)	                
+	private String forestamp;                                 
 	                                                          
+	@Column(name = "INDTARVIR", length = 01)	                
+	private String indtarvir;                                 
+	                                                          
+	@Column(name = "INDOFFPVV", length = 01)	                
+	private String indoffpvv;                                 
+	                                                          
+	@Column(name = "CODENTUMO", length = 04)	                
+	private String codentumo;                                 
+	                                                          
+	@Column(name = "CODOFIUMO", length = 04)	                
+	private String codofiumo;                                 
+	                                                          
+	@Column(name = "USUARIOUMO", length = 8)	                
+	private String usuarioumo;                                
+	                                                          
+	@Column(name = "CODTERMUMO", length = 8)	                
+	private String codtermumo;                                
+	                                                          
+	@Column(name = "CONTCUR", length = 30)                    
+	private String contcur;
+	
+	
+	public Mpdt025() {
+		this.codent = codent;
+		this.codmar = codmar;
+		this.indtipt = indtipt;
+		this.binenttip = binenttip;
+		this.binproc = binproc;
+		this.numulttar = numulttar;
+		this.inddebcre = inddebcre;
+		this.indbinemp = indbinemp;
+		this.rangosup = rangosup;
+		this.rangoinf = rangoinf;
+		this.rutinapan = rutinapan;
+		this.codserv = codserv;
+		this.gencarpin = gencarpin;
+		this.indintpan = indintpan;
+		this.indcmbpan = indcmbpan;
+		this.indcmbpin = indcmbpin;
+		this.nummesproren = nummesproren;
+		this.nummintar = nummintar;
+		this.nummaxdia = nummaxdia;
+		this.tecnologia = tecnologia;
+		this.indgenvisaphone = indgenvisaphone;
+		this.indacttar = indacttar;
+		this.fecalta = fecalta;
+		this.fecini = fecini;
+		this.fecfin = fecfin;
+		this.gruafin = gruafin;
+		this.porcesafin = porcesafin;
+		this.porbontitafin = porbontitafin;
+		this.indadmpres = indadmpres;
+		this.indpinpres = indpinpres;
+		this.vigtarpre = vigtarpre;
+		this.indmesvigmin = indmesvigmin;
+		this.codclave = codclave;
+		this.indrescli = indrescli;
+		this.fecexpmon = fecexpmon;
+		this.exponente = exponente;
+		this.numkpin = numkpin;
+		this.pista1 = pista1;
+		this.pista2 = pista2;
+		this.tamcodbarr = tamcodbarr;
+		this.forestamp = forestamp;
+		this.indtarvir = indtarvir;
+		this.indoffpvv = indoffpvv;
+		this.codentumo = codentumo;
+		this.codofiumo = codofiumo;
+		this.usuarioumo = usuarioumo;
+		this.codtermumo = codtermumo;
+		this.contcur = contcur;
+	}
+
 	public String getCodent() {
 		return codent;
 	}
@@ -177,10 +256,6 @@ package com.oneproject.satparam.modelo;
 	public void setBinproc(String binproc) {
 		this.binproc = binproc;
 	}
-
-	
-
-	
 
 	public long getNumulttar() {
 		return numulttar;
@@ -238,12 +313,12 @@ package com.oneproject.satparam.modelo;
 		this.codserv = codserv;
 	}
 
-	public String getGENCARPIN() {
-		return GENCARPIN;
+	public String getGencarpin() {
+		return gencarpin;
 	}
 
-	public void setGENCARPIN(String gENCARPIN) {
-		GENCARPIN = gENCARPIN;
+	public void setGencarpin(String gencarpin) {
+		this.gencarpin = gencarpin;
 	}
 
 	public String getIndintpan() {
@@ -524,36 +599,7 @@ package com.oneproject.satparam.modelo;
 
 	public void setContcur(String contcur) {
 		this.contcur = contcur;
-	}
-
-	@Column(name = "FORESTAMP", length = 10)	                
-	private String forestamp;                                 
-	                                                          
-	@Column(name = "INDTARVIR", length = 01)	                
-	private String indtarvir;                                 
-	                                                          
-	@Column(name = "INDOFFPVV", length = 01)	                
-	private String indoffpvv;                                 
-	                                                          
-	@Column(name = "CODENTUMO", length = 04)	                
-	private String codentumo;                                 
-	                                                          
-	@Column(name = "CODOFIUMO", length = 04)	                
-	private String codofiumo;                                 
-	                                                          
-	@Column(name = "USUARIOUMO", length = 8)	                
-	private String usuarioumo;                                
-	                                                          
-	@Column(name = "CODTERMUMO", length = 8)	                
-	private String codtermumo;                                
-	                                                          
-	@Column(name = "CONTCUR", length = 30)                    
-	private String contcur;                                   
-	                                                          
-
-	
-		
-	
+	}                                   
 	
 	
 	

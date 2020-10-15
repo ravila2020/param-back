@@ -10,6 +10,10 @@ public class Mpdt025Id implements Serializable {
 	private String codent;
 	private int codmar;
 	private int indtipt;
+
+	private String binproc;                                   
+	private String rangosup;                                  
+	private String rangoinf;
 	
 	
 	
@@ -31,5 +35,25 @@ public class Mpdt025Id implements Serializable {
 	public void setIndtipt(int indtipt) {
 		this.indtipt = indtipt;
 	}
+	public String getBinproc() {
+		return binproc;
+	}
+	public void setBinproc(String binproc) {
+		this.binproc = binproc;
+	}
+	public String getRangosup() {
+		return rangosup;
+	}
+	public void setRangosup(String rangosup) {
+		this.rangosup = rangosup;
+	}
+	public String getRangoinf() {
+		return rangoinf;
+	}
+	public void setRangoinf(String rangoinf) {
+		this.rangoinf = rangoinf;
+	}                                  
+	
+	
 
 }
